@@ -1,13 +1,274 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap');
+
+:root {
+  --primary: #d3bc5f;
+  --secondary: #ac984b;
+  --error: #e7195a;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  margin: 0;
+  font-family: "Poppins";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f1f1f1;
 }
+
+.home-main-container {
+  padding: 50px;
+}
+
+.workout-container {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 50px;
+}
+
+/*HOME CSS*/
+.workout-card {
+  padding: 20px;
+  margin: 15px 0px;
+  background-color: white;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.workout-card h4 {
+  margin: 0px;
+  font-size: 1.2em;
+  color: var(--primary);
+}
+
+.workout-card p {
+  margin: 5px 0px;
+}
+
+.error {
+  padding: 10px;
+  background-color: #ffefef;
+  border: 1px solid var(--error);
+  border-radius: 4px;
+}
+
+.card-buttons {
+  display: flex;
+  align-items: flex-start;
+}
+
+.workout-card span {
+  background-color: var(--primary);
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.workout-card span:hover {
+  background-color: var(--secondary);
+  color: white;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.create-container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+/* NAVBAR CSS */
+.NavBarItems {
+  background-color: white;
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
+.logo-section {
+  display:flex;
+   align-items:center;
+   margin-left: 30px;
+}
+
+.navbar-logo {
+  color: black;
+  justify-content: start;
+  margin-left: 20px;
+}
+
+.nav-menu {
+  display: grid;
+  grid-template-columns: repeat(7, auto);
+  grid-gap: 10px;
+  list-style: none;
+  text-align: center;
+  max-width: 70vw;
+  justify-content: end;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+}
+
+.menu-icon {
+  display: none;
+}
+
+.nav-links {
+  color: black;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease-out;
+}
+
+.nav-links:hover {
+  color:#d3bc5f;
+}
+
+.nav-links-mobile {
+  color: black;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  margin-right: 10px;
+  border: 2px solid #d3bc5f;
+  cursor: pointer;
+}
+
+.nav-links-mobile:hover {
+  background-color: #d3bc5f;
+  transition: all 0.2s ease-in;
+}
+
+.nav-buttons-container {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.nav-buttons-container span {
+  margin-right: 10px;
+}
+
+.nav-button {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  background-color: #27374D;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+}
+
+.nav-button:hover {
+  background-color: #9DB2BF;
+}
+
+.nav-buttons {
+  display: flex;
+  flex-direction: row;
+}
+
+.nav-button {
+  margin-right: 10px;
+  padding: 15px 20px;
+}
+
+@media screen and (max-width: 960px) {
+  .NavBarItems {
+      justify-content: space-between;
+      display: flex;
+      align-items: center;
+      font-size: 1.2rem;
+      height: 12vh;
+      flex-wrap: wrap;
+  }
+
+  .nav-menu {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 500px;
+      position: absolute;
+      top: 80px;
+      left: -200%;
+      opacity: 1;
+      transition: all 0.5s ease;
+      list-style: none;
+  }
+
+  .nav-menu-active {
+      opacity: 1;
+      transition: all 0.5s ease;
+      z-index: 1;
+      list-style: none;
+      width: 100%;
+      padding: 0px;
+      background-color: white;
+      margin: 0;
+  }
+
+  .nav-links {
+      text-align: center;
+      padding: 2rem;
+      width: 100%;
+      display: table;
+  }
+
+  .nav-links:hover {
+      background-color: #d3bc5f;
+      border-radius: 0;
+      color: black;
+  }
+
+  .nav-links-mobile {
+      text-align: center;
+      padding: 2rem;
+      width: 100%;
+      display: table;
+      margin: 0px;
+      border: 0;
+  }
+
+  .nav-links-mobile:hover {
+      background-color: #d3bc5f;
+      color: #27374D;
+  }
+
+  .nav-buttons-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .menu-icon {
+      display: block;
+      font-size: 1.8rem;
+      cursor: pointer;
+      margin-right: 30px;
+  }
+
+  .menuItems {
+      display: flex;
+  }
+
+  .nav-buttons {
+    flex-direction: column;
+  }
+
+  .workout-container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+}
+
+@media screen and (max-width: 360px) {
+  .navbar-logo {
+    display: none;
+  }
+}
+
