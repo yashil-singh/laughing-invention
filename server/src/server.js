@@ -22,7 +22,7 @@ app.use('/api/workouts', workoutRoutes)
 app.use('/api/user', userRoutes)
 
 //connect to db
-mongoose.connect(process.env.MONGO_URI) //connect into your database by pasting your mongodb link here with your username and password
+mongoose.connect(process.env.MONGO_URI)
     .then(() => {
         //listening for request
         app.listen(process.env.PORT, () => {
