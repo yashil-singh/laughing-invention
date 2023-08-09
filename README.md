@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## To connect to mongodb 
 
-Make sure to create an account in mongodb atlas. You can then use a link provided by mongodb to connect to your own database. Copy and paste that link in the `server.js` folder under the `server` folder.
+Make sure to create an account in mongodb atlas. You can then use a link provided by mongodb to connect to your own database. Copy and paste that link in the `.env` folder under the `server` folder.
 
 ## To run react client
 
